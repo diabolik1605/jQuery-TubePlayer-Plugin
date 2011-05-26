@@ -159,6 +159,7 @@
 		showControls: 1,
 		showRelated: 0,
 		autoPlay: 0,
+		autoHide: 0,
 		swfobjectURL: "http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js",
 		
 		// privately used
@@ -342,6 +343,8 @@
 				playerVars: { 
 					
 					'autoplay': o.autoPlay, 
+
+					'autohide' : o.autoHide,
 					
 					'controls': o.showControls,
 					
@@ -498,6 +501,7 @@
 			url.push( "&playerapiid=" + o.playerID );
 			url.push( "&rel= " + o.showRelated );
 			url.push( "&autoplay=" + o.autoPlay );
+			url.push( "&autohide=" + o.autoHide );
 			url.push( "&controls=" + o.showControls );
 			
 			swfobject.embedSWF(url.join(""), o.playerID, 
